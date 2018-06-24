@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Node.h"
+#include "CNode.h"
 
 struct node {
     void *element;

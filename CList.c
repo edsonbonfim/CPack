@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Node.h"
-#include "List.h"
+#include "CNode.h"
+#include "CList.h"
 
 struct list {
     int size;
@@ -15,8 +15,8 @@ List ListInit(void) {
 
     if (list == NULL) {
 
-        fprintf(stderr, "Erro ao criar lista, endereco de memoria nao pode ser alocado");
-        exit(-1);
+        fprintf(stderr, "Could not create a list");
+        exit(EXIT_FAILURE);
     }
 
     list->node = NodeInit();
