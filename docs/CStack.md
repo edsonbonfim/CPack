@@ -1,6 +1,6 @@
 # CStack
 
-These functions are declared in the **`CList.h`** header file:
+These functions are declared in the **`CStack.h`** header file:
 
 * [StackInit](#stackinit)
 * [StackFree](#stackfree)
