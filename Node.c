@@ -52,13 +52,9 @@ Node NodeSubNode(Node node, int index) {
 
     int i = 0;
 
-    for (Node tmp = node; tmp != NULL; tmp = tmp->prox) {
-
+    for (Node tmp = node; tmp != NULL; tmp = tmp->prox, i++)
         if (i == index)
             return tmp;
-
-        i++;
-    }
 
     return NULL;
 }
@@ -67,41 +63,37 @@ void *NodeGet(Node node, int index) {
 
     node = NodeSubNode(node, index);
 
-    if (node != NULL)
-        return node->element;
-
-    return NULL;
+    return node != NULL ? node->element : NULL;
 }
 
 void NodeRemove(Node *node, Node *last, int size, int index) {
 
-    int i = 0;
-
+    // Elemento a ser removido eh o primeiro da lista
     if (index == 0) {
 
         Node tmp = *node;
         *node = (*node)->prox;
         free(tmp);
+
         return;
     }
 
-    for (Node tmp = *node; tmp != NULL; tmp = tmp->prox) {
+    int i = 0;
+
+    for (Node tmp = *node; tmp != NULL; tmp = tmp->prox, i++) {
 
         if (i == index-1) {
 
             Node tmp2 = tmp->prox;
-
             tmp->prox = tmp2->prox;
 
-            if (size-1 == index) {
-
+            // Caso o elemento a ser removido seje o ultimo da lista
+            // o ponteiro para o ultimo elemento deve ser atualizado
+            if (size-1 == index)
                 *last = tmp;
-            }
 
             break;
         }
-
-        i++;
     }
 }
 
@@ -109,14 +101,12 @@ void NodeSet(Node *node, int index, void *element) {
 
     int i = 0;
 
-    for (Node tmp = *node; tmp != NULL; tmp = tmp->prox) {
+    for (Node tmp = *node; tmp != NULL; tmp = tmp->prox, i++) {
 
         if (i == index) {
 
             (*node)->element = element;
             break;
         }
-
-        i++;
     }
 }
