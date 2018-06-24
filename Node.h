@@ -9,9 +9,9 @@ Node NodeFree(Node node);
 
 void NodeAdd(Node *node, Node *last, void *element);
 
-void *NodeGet(Node node, int index);
+void NodeRemove(Node *node, Node *last, int size, int index);
 
-void NodeRemove(Node *node, int index);
+void *NodeGet(Node node, int index);
 
 void NodeSet(Node *node, int index, void *element);
 

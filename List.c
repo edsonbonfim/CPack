@@ -47,7 +47,7 @@ void *ListGet(List list, int index) {
 
 void ListRemove(List *list, int index) {
 
-    NodeRemove(&(*list)->node, index);
+    NodeRemove(&(*list)->node, &(*list)->last, ListSize(*list), index);
     (*list)->size--;
 }
 

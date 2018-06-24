@@ -73,9 +73,17 @@ void *NodeGet(Node node, int index) {
     return NULL;
 }
 
-void NodeRemove(Node *node, int index) {
+void NodeRemove(Node *node, Node *last, int size, int index) {
 
     int i = 0;
+
+    if (index == 0) {
+
+        Node tmp = *node;
+        *node = (*node)->prox;
+        free(tmp);
+        return;
+    }
 
     for (Node tmp = *node; tmp != NULL; tmp = tmp->prox) {
 
@@ -85,7 +93,10 @@ void NodeRemove(Node *node, int index) {
 
             tmp->prox = tmp2->prox;
 
-            free(tmp2);
+            if (size-1 == index) {
+
+                *last = tmp;
+            }
 
             break;
         }
