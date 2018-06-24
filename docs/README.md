@@ -31,7 +31,7 @@ Replaces the element at the specified position in the list with the specified el
 ```c
 void ListSet(List *l, int i, void *e);
 ```
-Returns the nnumber of elements in the list:
+Returns the number of elements in the list:
 ```c
 int ListSize(List l);
 ```
