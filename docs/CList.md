@@ -1,6 +1,6 @@
 # CList
 
-These functions are declared in the **```CList.h```** header file
+These functions are declared in the **```CList.h```** header file:
 
 * [ListInit](ListInit)
 * [ListFree](ListFree)
