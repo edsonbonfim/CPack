@@ -2,13 +2,13 @@
 
 These functions are declared in the **```CList.h```** header file:
 
-* [ListInit](ListInit)
-* [ListFree](ListFree)
-* [ListAdd](ListAdd)
-* [ListGet](ListGet)
-* [ListRemove](ListRemove)
-* [ListSet](ListSet)
-* [ListSize](ListSize)
+* [ListInit](#ListInit)
+* [ListFree](#ListFree)
+* [ListAdd](#ListAdd)
+* [ListGet](#ListGet)
+* [ListRemove](#ListRemove)
+* [ListSet](#ListSet)
+* [ListSize](#ListSize)
 
 ### ListInit
 
