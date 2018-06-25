@@ -1,8 +1,8 @@
 #ifndef CPACK_H
 #define CPACK_H
 
-#include "CList/CList.h"
-#include "CStack/CStack.h"
-#include "CQueue/CQueue.h"
+#include "CList.h"
+#include "CStack.h"
+#include "CQueue.h"
 
 #endif
